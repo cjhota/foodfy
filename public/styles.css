@@ -1,8 +1,8 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap";
 
 :root {
-    --blaks: #111111;
-    --redxs: #777777;
+    --black: #111111;
+    --gray: #777777;
 }
 
 * {
@@ -17,7 +17,7 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-.start {
+.conteiner {
     max-width: 940px;
     margin: 0 auto;
 }
@@ -31,20 +31,20 @@ header {
   max-width: 940px;
 }
 
-header ul {
+header div {
     display: flex;
     margin-left: 107px;
 }
 
-header ul li a {
+header div a {
   font-size: 1rem;
-  color: var(--blaks);
+  color: var(--black);
   text-decoration: none;
   padding: 15px;
 
 }
 
-/* PAG OF HOME */
+/* HOME */
 
 .banner {
   background-color: #FBDFDB;
@@ -66,69 +66,72 @@ header ul li a {
   font-size: 32px;
   line-height: 38px;
   font-weight: bold;
-  color: var(--blaks);
+  color: var(--black);
 }
 
-.banner div p {
+.banner div .description {
   font-size: 18px;
   line-height: 28px;
   margin-top: 10px;
-  color: var(--blaks);
+  color: var(--black);
   opacity: 0.6;
 }
 
-.main_cards {
+.cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.main_cards h4 {
+.cards h4 {
     flex: 1 1 100%;
     font-size: 24px;
     line-height: 28px;
     font-weight: bold;
-    color: var(--blaks);
+    color: var(--black);
     margin-top: 50px;
 }
 
-.main_cards .card {
+.cards .card {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
 
-.main_cards .card img {
+.cards .card img#receitasImg {
     max-width: 300px;
+    height: 140px;
     border-radius: 15px;
     margin-top: 20px;
     cursor: pointer;
 }
 
-.main_cards .card p {
+.cards .card p {
   font-size: 18px;
   line-height: 21px;
-  color: var(--blaks);
+  color: var(--black);
   margin-top: 20px;
 }
 
-.main_cards .card span {
+.cards .card span {
   font-size: 14px;
   line-height: 16px;
-  color: var(--redxs);
+  color: var(--gray);
   margin-top: 5px;
 }
 
-.relt h1 {
+ /* About factory*/
+
+.aboutInstituional h1 {
   font-size: 24px;
   font-weight: bold;
   line-height: 28px;
-  color: var(--blaks);
+  color: var(--black);
   margin-top: 10px;
 }
 
-.relt p {
+.aboutInstituional p {
   font-size: 18px;
   line-height: 28px;
   color: #444444;
@@ -136,15 +139,15 @@ header ul li a {
   opacity: 0.7;
 }
 
-.relt h3 {
+.aboutInstituional h3 {
   font-size: 20px;
   line-height: 24px;
-  color: var(--blaks);
+  color: var(--black);
   margin-top: 30px;
 }
 
 /* Modal */
-
+/* 
 .modal_overlay {
   background: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -182,7 +185,7 @@ header ul li a {
 .modal_content p {
   font-size: 24px;
   line-height: 28px;
-  color: var(--blaks);
+  color: var(--black);
   margin-top: 20px;
 }
 
@@ -196,7 +199,7 @@ header ul li a {
 .modal_close p {
   font-size: 16px;
   line-height: 19px;
-  color: var(--blaks);
+  color: var(--black);
   position: absolute;
   text-decoration: none;
   bottom: 30px;
@@ -208,13 +211,15 @@ header ul li a {
 .modal_overlay.active {
   opacity: 1;
   visibility: visible;
-}
+} */
 
-/* Rodape */
+/* footer */
 
 footer {
     background-color: #eeeeee;
     margin-top: 50px;
+    z-index: -9999999;
+    display: flex;
 }
 
 footer p {
