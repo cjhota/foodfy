@@ -146,82 +146,7 @@ header div a {
   margin-top: 30px;
 }
 
-/* Modal */
-/* 
-.modal_overlay {
-  background: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.modal {
-  background-color: #ffffff;
-  border-radius: 16px;
-  width: 660px;
-  height: 513px;
-  margin: 15vh auto;
-  position: relative;
-}
-
-.modal_content {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.modal_content img {
-  max-width: 600px;
-  border-radius: 16px;
-  cursor: pointer;
-}
-
-.modal_content p {
-  font-size: 24px;
-  line-height: 28px;
-  color: var(--black);
-  margin-top: 20px;
-}
-
-.modal_content span {
-  font-size: 18px;
-  line-height: 21px;
-  color: #777777;
-  margin-top: 5px;
-}
-
-.modal_close p {
-  font-size: 16px;
-  line-height: 19px;
-  color: var(--black);
-  position: absolute;
-  text-decoration: none;
-  bottom: 30px;
-  right: 285px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.modal_overlay.active {
-  opacity: 1;
-  visibility: visible;
-} */
 /*erro 404*/
-
-header>#erro404 {
-  display: flex;
-  justify-content: flex-start;
-  /* flex-wrap: wrap; */
-  align-items: center;
-  /* margin: 38px auto 30px auto; */
-  /* max-width: 940px;*/
-}
 
 #erro404 {
   content: "";
@@ -237,6 +162,46 @@ header>#erro404 {
 
 }
 
+/*Page Receita*/
+
+.homeReceita {
+  max-width: 940px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+.informations {
+  text-align: center;
+}
+
+.informations h2 {
+  font-size: 36px;
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: var(--black);
+  letter-spacing: 0.42px;
+}
+
+.informations span {
+  font-weight: normal;
+  font-size: 20px;
+  color: var(--gray);
+  text-align: center;
+  }
+
+  /* .info_Ingredientes ul li {
+    align-items: center;
+    list-style: var(--black);
+  } */
+
+  /* li::before {
+    content: "•"; 
+    color: red;
+    display: inline-block; 
+    width: 1em;
+    margin-left: 0em;
+    size: 1em;
+  } */
 
 /* footer */
 

@@ -23,6 +23,11 @@ server.get("/receitas", function(req, res){
     res.render("receitas", {items: receitas})
 })
 
+server.get("/receita", function(req, res){
+    res.render("receita")
+})
+
+
 server.get("/sobre", function(req, res){
     res.render("sobre")
 })
