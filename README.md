@@ -4,6 +4,12 @@
 <div align="center">
 <img src="https://user-images.githubusercontent.com/87287868/128260149-9e617660-fbfc-4061-ad20-8beb924626c8.jpg" width="700px"/>
  </div>
+ 
+## Description
+
+`
+  Desenvolvimento de um mini e-commerce para venda de comida.
+`
 
 ## Tecnologias utilizadas
 #### Back end
