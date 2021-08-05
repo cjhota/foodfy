@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/styles.css">
-        <title>
-            {% block header %}{% endblock header %}
-        </title>
-    </head>
-    <body>
-        <header>
-            <a href="/"><img src="/assets/logo.png" alt="Foodfy"/>
-            </a>
-            <nav>
-                <div>
-                    <a href="/sobre" title="Sobre">Sobre</a>
-                    <a href="/receitas" title="Receitas">Receitas</a>
-                </div>
-            </nav>
-        </header>
-        <section>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>
+        {% block header %}{% endblock header %}
+    </title>
+</head>
+
+<body>
+    <header>
+        <a href="/"><img src="/assets/logo.png" alt="Foodfy" />
+        </a>
+        <nav>
+            <div>
+                <a href="/sobre" title="Sobre">Sobre</a>
+                <a href="/receitas" title="Receitas">Receitas</a>
+            </div>
+        </nav>
+    </header>
+    <section>
         {% block content %}{% endblock %}
-        </section>
-        {% include "footer.njk" %}
-        <script src="scripts.js"></script>
-    </body>
+    </section>
+    {% include "footer.njk" %}
+    {% block scripts %}
+    <script src="/scripts.js"></script>
+    {% endblock %}
+</body>
+
 </html>
