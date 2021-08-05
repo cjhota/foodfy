@@ -1,21 +1,42 @@
-const modalOverlay = document.querySelector(".modal_overlay")
-const cards = document.querySelectorAll(".card")
+const currentPage = location.pathname
+const menuItems = document.querySelectorAll("header .links a")
 
-for (let card of cards) {
-    card.addEventListener("click", function() {
-    modalOverlay.classList.add("active")
-    const cardImg = card.querySelector("img").getAttribute("src")
-    const titleImg = card.querySelector("p").innerText
-    const authorImg = card.querySelector("span").innerText
+for (item of menuItems) {
 
-    modalOverlay.querySelector("img").setAttribute("src", cardImg)
-    modalOverlay.querySelector("img").setAttribute("title", titleImg)
-    modalOverlay.querySelector("p").innerHTML = titleImg
-    modalOverlay.querySelector("span").innerHTML = authorImg
-    
-    }) 
+    if(currentPage.includes(item.getAttribute("href"))) {
+        item.classList.add("active")
+    }
 }
 
-document.querySelector(".modal_close").addEventListener("click", function() {
-    modalOverlay.classList.remove("active")
-});
+  // Redirect for recipe details
+  const cards = document.querySelectorAll('.card');
+  
+  for (let card of cards) {
+    card.addEventListener('click', () => {
+        const receitaId = card.getAttribute('id');
+        window.location.href = `/receitas/${receitaId}`
+      // console.log(receitaId/)
+    });
+  }
+  
+  // Hide/Show Button
+  const buttons = document.querySelectorAll('.btn-collapse')
+  const details = document.querySelectorAll('.details')
+  
+  function hideDetails(index) {
+    buttons[index].addEventListener('click', () => {
+      
+      if (details[index].classList.contains('hide-details')) {
+        details[index].classList.remove('hide-details')
+        buttons[index].innerHTML = 'esconder'
+      }
+      else {
+        details[index].classList.add('hide-details')
+        buttons[index].innerHTML = 'mostrar'
+      }
+    })
+  }
+  
+  for (let i = 0; i < 3; i++) {
+    hideDetails(i)
+  }

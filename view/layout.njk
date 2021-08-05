@@ -19,11 +19,10 @@
                 </div>
             </nav>
         </header>
+        <section>
         {% block content %}{% endblock %}
-   
-            <footer>
-                <p>Todos direitos reservados, receitas Foodfy.</p>
-            </footer>        
+        </section>
+        {% include "footer.njk" %}
         <script src="scripts.js"></script>
     </body>
 </html>
