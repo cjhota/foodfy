@@ -1,12 +1,10 @@
 const express = require('express')
 const routes = express.Router()
-
-const receitas = require("../data")
+const receitas = require("./data")
 
 routes.get("/", function (req, res) {
   res.render("index")
 })
-
 
 routes.get("/sobre", function (req, res) {
   res.render("sobre")
@@ -31,11 +29,6 @@ routes.get("/receitas/:index", (req, res) => {
       receita: receita[receitaIndex]
   })
 })
-
-// routes.get("/admin/recipes", (req, res) => {
-//   res.render("index")
-  
-// })
 
 // routes.get("/admin/recipes", recipes.index); // Mostrar a lista de receitas
 // routes.get("/admin/recipes/create", recipes.create); // Mostrar formulário de nova receita

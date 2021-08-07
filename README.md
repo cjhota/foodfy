@@ -21,6 +21,13 @@
 
 ### RUN PROJECT
 
+<!-- 
+## Important!
+
+- para execular o projeto será necessario instalar o `postgres` localmente, setar as confugurações de usuario e senhas no arquivo db, em seguida executar o codigo presente no `utilidad.sql` na QUERY.
+
+ -->
+
 - clonar repositório
 ```
 git clone https://github.com/cjhota/foodfy.git
