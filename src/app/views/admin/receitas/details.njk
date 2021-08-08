@@ -1,16 +1,22 @@
-{% extends "layout.njk" %}
+{% extends "layoutAdmin.njk" %}
 {% block content %}
-<section class="contentReceita conteiner">
-    <img class="homeReceita" src="{{ receita.image }}" alt="">
+<section class="conteiner">
+<section class="info_header_edit">
+    <h3>Receita: Tripo Bacon Burger</h3>
+    <button type="submit">Editar receita</button>
+</section>
+    {# <img class="homeReceita" src="{{ receita.image }}" alt=""> #}
+    <img class="image_details" src="/assets/burger.png" alt="">
     <div class="informations">
         <h2>{{ receita.title }}</h2>
         <span>{{ receita.author }}</span>
+         <h2>Triplo bacon burger</h2>
+        <span>por Jorge Relato</span>
     </div>
 </section>
 <section class="conteiner bodyReceita">
     <div id="titleMore">
         <h2>Ingredientes</h2>
-        <a class="btn-collapse">ESCONDER</a>
     </div>
     <div class="info_Ingredientes details">
         <ul>
@@ -23,7 +29,6 @@
     </div>
     <div id="titleMore">
         <h2>Modo de preparo</h2>
-        <a class="btn-collapse">MOSTRAR</a>
         <div class="details">
         <p></p>
     </div>
@@ -31,13 +36,9 @@
 
     <div id="titleMore">
         <h2>Informações adicionais</h2>
-        <a class="btn-collapse">ESCONDER</a>
     </div>
     <div class="details hide-details">
         <p>{{ receita.information }}</p>
     </div>
 </section>
-{% endblock %}
-{% block scripts %}
-<script src="/scripts.js"></script>
 {% endblock %}
