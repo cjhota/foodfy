@@ -1,26 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Admin - Listagem</title>
-    </head>
-    <body>
-        <header>
-            <div class="links_header">
-                <a href="/">
-                    <img src="/public/assets/logo.png" alt="">
-                </a>
+{% extends "layoutAdmin.njk" %}
+{% block content %}
+    <main class="card_recepes">
+        <h2>Gerenciar receitas</h2>
+        <section>
+            <div class="grid_recipes">
+                <section class="grid_details_recipes">
+                    <div class="rececipe_image">
+                        <img src="/assets/espaguete.png" alt="">
+                    </div>
+                    <div class="recipe_details">
+                        <h3>Triplo bacon burger</h3>
+                        <span>por Jorge Relato</span>
+                        <a href="">Visualizar</a>
+                    </div>
+                </section>
             </div>
-        </header>
-        <main>
-            <section class="grid_card">
-                    <section ></section>
-                <div class="cards">
-                    <img src="" alt="" srcset="">
-                </div>
-            </section>
-        </main>
-    </body>
-</html>
+        </section>
+    </main>
+{% endblock content %}

@@ -228,8 +228,6 @@ a.btn-collapse {
   margin-left: 8px;
 }
 
-
-
 .hide-details {
   display: none;
   animation: up;
@@ -302,4 +300,55 @@ footer p {
   color: #999999;
   text-align: center;
   padding: 23px 0;
+}
+
+/* Home admin*/
+
+ #links_header {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  height: 80px;
+  background-color: var(--black);
+  display: flex;
+  flex-wrap: initial;
+  align-items: center;
+  padding: 32px 180px;
+  font-size: 16px;
+  margin: 0;
+}
+
+#links_header div {
+  margin-left: 0;
+}
+
+.card_recepes {
+  max-width: 1135px;
+  margin: 0 auto;
+}
+
+.card_recepes h2 {
+  font-size: 24px;
+  color: var(--black);
+  margin-top: 30px;
+}
+
+.grid_recipes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid_details_recipes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid_recipes {
+  margin-top: 25px;
+}
+
+.rececipe_image img {
+  border-radius: 8.57px;
+  width: 172px;
+  height: 80px;
 }
