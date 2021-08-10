@@ -469,6 +469,8 @@ input[type="text"] {
   border-radius: 4px;
   padding: 16px;
   outline: none;
+  margin-bottom: 10px;
+
 }
 
 input::placeholder {
