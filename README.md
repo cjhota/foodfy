@@ -41,17 +41,12 @@ npm install
 npm start
 ```
 
+## 
 ### Autors
-## ::
 
-<p align="center">
-  <a href="#rocket-sobre-o-desafio">José Ribeiro</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#calendar-entrega">Rocketseat</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+
+<p align="left">
+  <a href="https://www.linkedin.com/in/josekcarlho">José Ribeiro</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/school/rocketseat/">Rocketseat</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
-José Ribeiro | Rocketseat
-<!-- 
-https://www.linkedin.com/in/josekcarlho
-https://www.linkedin.com/school/rocketseat/
- -->
