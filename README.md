@@ -41,9 +41,8 @@ npm install
 npm start
 ```
 
-
 ### Autors
-## :rocket:
+## ::
 
 <p align="center">
   <a href="#rocket-sobre-o-desafio">José Ribeiro</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
