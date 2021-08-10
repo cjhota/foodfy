@@ -43,6 +43,13 @@ npm start
 
 
 ### Autors
+## :rocket:
+
+<p align="center">
+  <a href="#rocket-sobre-o-desafio">José Ribeiro</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#calendar-entrega">Rocketseat</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
 
 José Ribeiro | Rocketseat
 <!-- 
