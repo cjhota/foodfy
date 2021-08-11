@@ -8,7 +8,7 @@
 //   }
 // }
 
-// adicionar items
+//adicionar items
 function addIngredient() {
   const ingredients = document.querySelector("#ingredients");
   const fieldContainer = document.querySelectorAll(".ingredient");

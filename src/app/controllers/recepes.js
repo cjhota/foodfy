@@ -8,7 +8,7 @@ module.exports = {
     edit(req, res) {
         return res.render("admin/receitas/edit")
     },
-    details(req, res) {
-        return res.render("admin/receitas/details")
+    show(req, res) {
+        return res.render("admin/receitas/show")
     }
 }
