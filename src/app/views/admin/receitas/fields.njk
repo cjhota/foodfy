@@ -1,0 +1,24 @@
+{% block fields %}
+<section class="ingredients">
+    <h3>Imagem da receita</h3>
+    <input type="text" value="">
+    <h3>Ingredientes</h3>
+    <div id="ingredients">
+        <div class="ingredient">
+            <input type="text" name="ingredients[]" value="" placeholder="Adicionar novo ingrediente" />
+        </div>
+    </div>
+    <button type="button" class="btn_add_items add-ingredient">Adicionar novo ingrediente</button>
+    <h3>Modo de preparo</h3>
+    <input type="text" value="">
+    <h3>Ingredientes</h3>
+    <div id="prox_passos">
+        <div class="prox_passo">
+            <input type="text" name="prox_passos[]" value="" placeholder="Adicionar novo passo" />
+        </div>
+    </div>
+    <button class="btn_add_items add-preparation" type="button">Adicionar novo passo</button>
+    <h3>Informações adicionais</h3>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+</section>
+{% endblock fields %}
