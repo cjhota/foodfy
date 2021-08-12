@@ -1,5 +1,5 @@
 const fs = require('fs')
-const data = require("../../../data.json")
+const data = require("../../data.json")
 
 module.exports = {
     index(req, res) {
@@ -8,22 +8,16 @@ module.exports = {
     create(req, res) {
         return res.render("admin/receitas/create")
     },
+    post(req, res) {
+
+        res.send(req.body)
+
+    },
     show(req, res) {
-        const {
-            id
-        } = req.params
-    
-        const foundRecepet = data.recepes.find(function (recepet) {
-            return recepet.id == id
-        })
-    
-        if (!foundRecepet) return res.send("recepet not found !")
+        const receitaIndex = req.params.index
+        const receita = [...receitas]
 
-
-
-        return res.render("admin/receitas/show"), {
-            recepet
-        }
+        return res.render("admin/receitas/show"), { receita: receita[receitaIndex] }
     },
     edit(req, res) {
         return res.render("admin/receitas/edit")
