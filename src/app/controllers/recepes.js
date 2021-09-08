@@ -10,6 +10,13 @@ module.exports = {
     },
     post(req, res) {
 
+        const keys = Object.keys(req.body)
+        for(key of keys) {
+            if(req.body[key] == "") {
+                return res.send("Please, fill all fields")
+            }
+        }
+
         res.send(req.body)
 
     },
@@ -22,4 +29,15 @@ module.exports = {
     edit(req, res) {
         return res.render("admin/receitas/edit")
     },
+    put(req, res) {
+        const keys = Object.keys(req.body)
+        for(key of keys) {
+            if(req.body[key] == "") {
+                return res.send("Please, fill all fields")
+            }
+        }
+    },
+    delete(req, res) {
+        return
+    }
 }
