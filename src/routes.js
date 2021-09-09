@@ -2,25 +2,25 @@ const express = require('express')
 const routes = express.Router()
 const receitas = require("./data")
 
-const recipes = require("./app/controllers/recepes")
+const recipes = require("./app/controllers/recipes")
 
-routes.get("/", function (req, res) {
+routes.get("/users/", function (req, res) {
   res.render("index" ,{
     items: receitas
   })
 })
 
-routes.get("/sobre", function (req, res) {
+routes.get("/admin/users/sobre", function (req, res) {
   res.render("sobre")
 })
 
-routes.get("/receitas", function (req, res) {
-  res.render("receitas", {
+routes.get("/admin/users/receita", function (req, res) {
+  res.render("receita", {
       items: receitas
   })
 })
 
-routes.get("/receitas/:index", (req, res) => {
+routes.get("/admin/users/receitas/:index", (req, res) => {
   const receitaIndex = req.params.index
   const receita = [...receitas]
 
