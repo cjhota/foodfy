@@ -2,48 +2,24 @@ const express = require('express')
 const routes = express.Router()
 const receitas = require("./data")
 
+const users = require("./app/controllers/users")
 const recipes = require("./app/controllers/recipes")
 
-routes.get("/users/", function (req, res) {
-  res.render("index" ,{
-    items: receitas
-  })
-})
-
-routes.get("/admin/users/sobre", function (req, res) {
-  res.render("sobre")
-})
-
-routes.get("/admin/users/receita", function (req, res) {
-  res.render("receita", {
-      items: receitas
-  })
-})
-
-routes.get("/admin/users/receitas/:index", (req, res) => {
-  const receitaIndex = req.params.index
-  const receita = [...receitas]
-
-  // console.log(receita[receitaIndex])
-  res.render("receita", {
-      receita: receita[receitaIndex]
-  })
-})
+routes.get("/", users.index ) 
+// routes.get("/about", PagesController.about) 
+// routes.get("/recipes", PagesController.recipes )
+// routes.get("/recipe/:id", PagesController.recipe) 
+// routes.get('/chefs', PagesController.pagesChefs)
+// routes.get('/recipes/search', PagesController.filterRecipesByTitle)
 
 routes.get("/admin/recipes", recipes.index); // Mostrar a lista de receitas
 routes.get("/admin/recipes/create", recipes.create); // Mostrar formulário de nova receita
-routes.get("/admin/recipes/:id", recipes.show); // Exibir detalhes de uma receita
-routes.get("/admin/recipes/:id/edit", recipes.edit); // Mostrar formulário de edição de receita
+// routes.get("/admin/recipes/:id", recipes.show); // Exibir detalhes de uma receita
+// routes.get("/admin/recipes/:id/edit", recipes.edit); // Mostrar formulário de edição de receita
 
-routes.post("/admin/recipes", recipes.post); // Cadastrar nova receita
-routes.put("/admin/recipes", recipes.put); // Editar uma receita
-routes.delete("/admin/recipes", recipes.delete); // Deletar uma receita
-
-
-
-
-
-routes.get("/admin/recipes/edit", recipes.edit); // Mostrar formulário de edição de receita;
+// routes.post("/admin/recipes", recipes.post); // Cadastrar nova receita
+// routes.put("/admin/recipes", recipes.put); // Editar uma receita
+// routes.delete("/admin/recipes", recipes.delete); // Deletar uma receita
 
 routes.use(function (req, res) {
   res.status(404).render("not-found");
