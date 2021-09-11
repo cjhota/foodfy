@@ -5,34 +5,33 @@ const receitas = require("../../data")
 
 module.exports = {
     index(req, res) {
-      return res.render("users/index", {items: receitas})
+      return res.render("admin/users/index", {items: receitas})
 
-          console.log(receitas)
+        //   console.log(receitas)
     },
     about (req, res) {
-        return res.render("users/about")
+        return res.render("admin/users/about")
     },
-//     recepe(req, res) {
 
-//         return res.render("user/recepe", {
-//             items: receitas
+    recipes(req, res) {
+
+        return res.render("admin/user/recipes", {
+            items: receitas
             
-//           })
-//           console.log(receitas)
-
-//     },
-//     show(req, res) {
+          })
+        //   console.log(receitas)
+    },
+    show(req, res) {
   
-//         const receitaIndex = req.params.index
-//         const receita = [...receitas]
+        const receitaIndex = req.params.index
+        const receita = [...receitas]
       
-//         // console.log(receita[receitaIndex])
-//         return res.render("user/receitas", {
-//             receita: receita[receitaIndex]
-//         })
-    // }
+        // console.log(receita[receitaIndex])
+        return res.render("admin/user/show", {
+            receita: receita[receitaIndex]
+        })
+ }
 }
-
 // routes.get("/", function (req, res) {
 //     res.render("index" ,{
 //       items: receitas

@@ -1,14 +1,14 @@
 const express = require('express')
 const routes = express.Router()
-const receitas = require("./data")
+// const receitas = require("./data")
 
 const users = require("./app/controllers/users")
 const recipes = require("./app/controllers/recipes")
 
 routes.get("/", users.index ) 
-// routes.get("/about", PagesController.about) 
-// routes.get("/recipes", PagesController.recipes )
-// routes.get("/recipe/:id", PagesController.recipe) 
+routes.get("/about", users.about) 
+routes.get("/recipes", users.recipes )
+routes.get("/recipe/:id", users.show) 
 // routes.get('/chefs', PagesController.pagesChefs)
 // routes.get('/recipes/search', PagesController.filterRecipesByTitle)
 

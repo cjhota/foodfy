@@ -2,7 +2,7 @@ const fs = require('fs')
 const data = require("../../data.json")
 module.exports = {
     index(req, res) {
-        return res.render("/admin/recipes/index", {recepes: data.recepes})
+        return res.render("/admin/recipes/index", {recipes: data.recipes})
     },
     create(req, res) {
         return res.render("/admin/recipes/create")
@@ -25,8 +25,8 @@ module.exports = {
             add_preparation,
         } = req.body
     
-        const id = Number(data.recepes.length + 1)
-        data.recepes.push({
+        const id = Number(data.recipes.length + 1)
+        data.recipes.push({
             id,
             avatar_url,
             ingredients,
@@ -47,39 +47,39 @@ module.exports = {
             id
         } = req.params
     
-        const foundRecepes = data.recepes.find(function (recepe) {
-            return recepe.id == id
+        const foundRecepes = data.recipes.find(function (recipe) {
+            return recipe.id == id
         })
     
-        if (!foundRecepes) return res.send("recepe not found !")
+        if (!foundRecepes) return res.send("recipe not found !")
     
-        const recepe = {
+        const recipe = {
             ...foundRecepes,
         }
     
-        return res.render("/admin/recipes/:id", { recepe })
+        return res.render("/admin/recipes/:id", { recipe })
     },
     edit(req, res) {
         const { id } = req.params
 
-        const foundRecepes = data.recepes.find(function (recepe) {
-            return id == recepe.id
+        const foundRecepes = data.recipes.find(function (recipe) {
+            return id == recipe.id
         })
     
-        if (!foundRecepes) return res.send("recepe not found !")
+        if (!foundRecepes) return res.send("recipe not found !")
     
-        const recepe = {
+        const recipe = {
             ...foundRecepes,
         }
     
-        return res.render("/admin/recipes/:id/edit", { recepe })
+        return res.render("/admin/recipes/:id/edit", { recipe })
     },
     put(req, res) {
         const { id } = req.body
         let index = 0
     
-        const foundRecepes = data.recepes.find(function (recepe, foundIndex) {
-            if (id == recepe.id) {
+        const foundRecepes = data.recipes.find(function (recipe, foundIndex) {
+            if (id == recipe.id) {
                 index = foundIndex
                 return true
             }
@@ -87,17 +87,17 @@ module.exports = {
     
         if (!foundRecepes) return res.send("Member not found !")
     
-        const recepe = {
+        const recipe = {
             ...foundRecepes,
             ...req.body,
             id: Number(req.body.id)
         }
-        data.recepes[index] = recepe
+        data.recipes[index] = recipe
     
         fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
             if(err) return res.send("White error!")
     
-            return res.redirect(`/recepes/${id}`)
+            return res.redirect(`/recipes/${id}`)
         })
     },
     delete(req, res) {

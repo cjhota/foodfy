@@ -13,8 +13,8 @@ const cards = document.querySelectorAll('.card');
 
 for (let card of cards) {
   card.addEventListener('click', () => {
-    const receitaId = card.getAttribute('id');
-    window.location.href = `/receitas/${receitaId}`
+    const recipeId = card.getAttribute('id');
+    window.location.href = `/recipes/${recipeId}`
     // console.log(receitaId/)
   });
 }
