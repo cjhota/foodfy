@@ -13,9 +13,9 @@ module.exports = {
         return res.render("admin/users/about")
     },
 
-    recipes(req, res) {
+    recipe(req, res) {
 
-        return res.render("admin/user/recipes", {
+        return res.render("admin/user/recipe", {
             items: receitas
             
           })
@@ -27,7 +27,7 @@ module.exports = {
         const receita = [...receitas]
       
         // console.log(receita[receitaIndex])
-        return res.render("admin/user/show", {
+        return res.render("admin/user/recipes/:index", {
             receita: receita[receitaIndex]
         })
  }

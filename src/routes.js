@@ -7,13 +7,13 @@ const recipes = require("./app/controllers/recipes")
 
 routes.get("/", users.index ) 
 routes.get("/about", users.about) 
-routes.get("/recipes", users.recipes )
-routes.get("/recipe/:id", users.show) 
+routes.get("/recipe", users.recipes )
+routes.get("/recipes/:id", users.show) 
 // routes.get('/chefs', PagesController.pagesChefs)
 // routes.get('/recipes/search', PagesController.filterRecipesByTitle)
 
-routes.get("/admin/recipes", recipes.index); // Mostrar a lista de receitas
-routes.get("/admin/recipes/create", recipes.create); // Mostrar formulário de nova receita
+// routes.get("/admin/recipes", recipes.index); // Mostrar a lista de receitas
+// routes.get("/admin/recipes/create", recipes.create); // Mostrar formulário de nova receita
 // routes.get("/admin/recipes/:id", recipes.show); // Exibir detalhes de uma receita
 // routes.get("/admin/recipes/:id/edit", recipes.edit); // Mostrar formulário de edição de receita
 
