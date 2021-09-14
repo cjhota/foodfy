@@ -20,6 +20,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.active {
+  font-weight: bold;
+}
+
 .conteiner {
   max-width: 940px;
   margin: 0 auto;
