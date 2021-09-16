@@ -3,7 +3,7 @@ const data = require("../../data.json")
 module.exports = {
     index(req, res) {
         console.log("Estou por aqui no admin")
-        return res.render("admin/recipes/index")//, {recipes: data.recipes}
+        return res.render("admin/recipes/index", {recipes: data.recipes})//admin/recipes/index
     },
     create(req, res) {
         return res.render("admin/recipes/create")
@@ -17,7 +17,7 @@ module.exports = {
             }
         }
 
-        res.send(req.body)
+        // res.send(req.body)
 
         let {
             avatar_url,
@@ -27,6 +27,14 @@ module.exports = {
         } = req.body
     
         const id = Number(data.recipes.length + 1)
+        // let id = 1
+
+        // const lastRecipe = data.recipes[data.recipes.length - 1]
+    
+        // if (lastRecipe) {
+        //     id = lastRecipe.id + 1
+        // }
+    
         data.recipes.push({
             id,
             avatar_url,
@@ -84,7 +92,7 @@ module.exports = {
                  return true
              }
          })  
-         if (!foundRecepes) return res.send("Member not found !")  
+         if (!foundRecepes) return res.send("Recipe not found !")  
          const recipe = {
              ...foundRecepes,
              ...req.body,

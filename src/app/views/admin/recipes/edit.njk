@@ -11,5 +11,8 @@
         </div>
     </nav>
     {% include "admin/recipes/fields.njk" %}
+
+    <input type="hidden" name="id" value="{{recipes.id}}">
+
 </form>
 {% endblock %}
