@@ -4,29 +4,6 @@ const routes = express.Router()
 const users = require("./app/controllers/users")
 const recipes = require("./app/controllers/recipes")
 
-
-// routes.get('/', (req, res) => {
-//   res.render('users/index', { items: receitas })
-// })
-
-// routes.get('/about', (req, res) => {
-//   res.render('users/about')
-// })
-
-// routes.get('/recipes', (req, res) => {
-//   res.render('users/recipes', { items: receitas })
-// })
-
-// routes.get('/recipes/:index', (req, res) => {
-//   // console.log("estou aqui na rotas receitas")
-//   const receitaIndex = req.params.index
-//   const receita = [...receitas]
-
-//   // console.log(receita[receitaIndex])
-//   res.render('users/recipe', { receita: receita[receitaIndex] })
-// })
-
-// 
 routes.get("/admin/recipes", recipes.index); // Mostrar a lista de receitas
 routes.get("/admin/recipes/create", recipes.create); // Mostrar formulário de nova receita
 routes.get("/admin/recipes/:id", recipes.show); // Exibir detalhes de uma receita
