@@ -6,7 +6,7 @@ const recipes = require("../../data");
 module.exports= {
 
 index (req, res) {
-    console.log(recipes)
+    // console.log(recipes)
     return res.render("users/index", { items:recipes  })//{ items: data.recipes }
 },                                      
 
@@ -17,13 +17,14 @@ about (req, res) {
 },
 
 recipes (req, res) {
-    console.log(recipes)
+    // console.log(recipes)
 
+    return res.send("Estou aqui")
     return res.render("users/recipes", { items: recipes  })
 },
 
 show (req, res) {
-    console.log(recipes)
+    // console.log(recipe)
 
 // console.log("estou aqui na rotas receitas")
   const recipeIndex = req.params.index
