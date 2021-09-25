@@ -19,19 +19,16 @@ about (req, res) {
 recipes (req, res) {
     // console.log(recipes)
 
-    return res.send("Estou aqui")
+    // return res.send("Estou aqui")
     return res.render("users/recipes", { items: recipes  })
 },
 
 show (req, res) {
-    // console.log(recipe)
-
-// console.log("estou aqui na rotas receitas")
   const recipeIndex = req.params.index
+//   recipes[recipeIndex]
   const recipe = [...recipes]
 
-  // console.log(receita[receitaIndex])
-  res.render('users/recipe', { recipe: recipe[recipeIndex] })
+  res.render('users/recipe', {  recipes: recipe[recipeIndex] }) //recipe: recipe[recipeIndex] ,
 }
 //     const recipeIndex = req.params.index;
 //     // data[recipeIndex]
