@@ -1,5 +1,5 @@
 const fs = require('fs')
-const data = require("../../data.json")
+// const data = require("../../../data.json")
 module.exports = {
     index(req, res) {
         console.log("Estou por aqui no admin")

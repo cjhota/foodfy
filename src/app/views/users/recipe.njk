@@ -1,10 +1,10 @@
 {% extends "layout.njk" %}
 {% block content %}
 <section class="contentReceita conteiner">
-    <img class="homeReceita" src="{{ recipe.image }}" alt="Imagem de {{recipe.title}}">
+    <img class="homeReceita" src="{{ recipes.image }}" alt="Imagem de {{recipes.title}}">
     <div class="informations">
-        <h2>{{ recipe.title }}</h2>
-        <span>{{ recipe.author }}</span>
+        <h2>{{ recipes.title }}</h2>
+        <span>{{ recipes.author }}</span>
     </div>
 </section>
 <section class="conteiner bodyReceita">
@@ -34,7 +34,7 @@
         <a class="btn-collapse">ESCONDER</a>
     </div>
     <div class="details hide-details">
-        <p>{{ recipe.information }}</p>
+        <p>{{ recipes.information }}</p>
     </div>
 </section>
 {% endblock %}
