@@ -16,7 +16,7 @@ routes.delete("/admin/recipes", recipes.delete); // Deletar uma receita
 routes.get("/", users.index ) 
 routes.get("/about", users.about) 
 routes.get("/recipe", users.recipes )
-routes.get("/recipes/:id", users.show) 
+routes.get("/recipes/:id", users.recipe) 
 // routes.get('/chefs', PagesController.pagesChefs)
 // routes.get('/recipes/search', PagesController.filterRecipesByTitle)
 

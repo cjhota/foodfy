@@ -1,29 +1,22 @@
-// const fs = require("fs");
-const data = require("../../../data.json");
-const recipes = require("../../data");
-// const receitas = require("../../data");
+const data = require('../../data.json')
+exports.index = function (req, res) {
+    return res.render("users/index", { items: data.recipes })
 
-module.exports= {
+}                                      
 
-index (req, res) {
-    return res.render("users/index", { items:recipes  })//{ items: data.recipes }
-},                                      
-
-about (req, res) {
+exports.about = function (req, res) {
     return res.render("users/about")
-},
-
-recipes (req, res) {
-    return res.render("users/recipes", { items: recipes  })
-},
-
-show (req, res) {
-  const recipeIndex = req.params.index
-  const recipe = [...recipes]
-
-  const recipe = recipes.recipes[recipeIndex]
-
-  res.render('users/recipe', {  recipes: recipe[recipeIndex] })
 }
 
+exports.recipes = function (req, res) {
+    return res.render("users/recipes", { items: data.recipes })
+}
+
+exports.recipe = function (req, res) {
+    const recipeIndex = req.params.index;
+    data[recipeIndex]
+    const recipe = data.recipes[recipeIndex]
+    console.log(recipe)
+
+    return res.render("users/recipe", { items: recipe })
 }
