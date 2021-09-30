@@ -16,7 +16,7 @@ exports.recipe = function (req, res) {
     const recipeIndex = req.params.index;
     data[recipeIndex]
     const recipe = data.recipes[recipeIndex]
-    console.log(recipe)
+    console.log(data.recipes)
 
     return res.render("users/recipe", { items: recipe })
 }

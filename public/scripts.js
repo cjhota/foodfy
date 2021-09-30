@@ -25,7 +25,7 @@ for (let card of cards) {
       let recipeIndex = card.getAttribute("id")
 
       console.log(recipeIndex);
-      window.location.href = `/recipes/${recipeIndex}`
+      window.location.href = `/recipe/${recipeIndex}`
   })
 }
 
