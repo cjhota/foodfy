@@ -13,10 +13,15 @@ exports.recipes = function (req, res) {
 }
 
 exports.recipe = function (req, res) {
-    const recipeIndex = req.params.index;
-    data[recipeIndex]
-    const recipe = data.recipes[recipeIndex]
-    console.log(data.recipes)
+    // const recipeIndex = req.params.index;
+    // data[recipeIndex]
+    // const recipe = data.recipes[recipeIndex]
+    // console.log(data.recipes)
 
-    return res.render("users/recipe", { items: recipe })
+   const recipeIndex = req.params.index
+        const recipe = [...data]
+        console.log(data.recipes)
+
+    return res.render("users/recipe"), { recipe: recipe[recipeIndex] }
+    // return res.render("users/recipe", { items: recipe })
 }
