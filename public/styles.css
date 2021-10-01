@@ -237,12 +237,12 @@ a.btn-collapse {
   margin-left: 8px;
 }
 
-.hide-details {
+/* .hide-details {
   display: none;
   animation: up;
   animation-timing-function: ease-out;
   animation-duration: 700ms;
-} 
+}  */
 
 @keyframes up {
   from {

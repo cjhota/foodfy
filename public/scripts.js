@@ -8,62 +8,38 @@ for (item of menuItems) {
   }
 }
 
-//Redirect for recipe details
+// Redirect for recipe details
 const cards = document.querySelectorAll('.card');
 
-// for (let card of cards) {
-//   card.addEventListener('click', () => {
-//     const recipeId = card.getAttribute('id');
-//     window.location.href = `/recipes/${recipeId}`
-//     console.log(receitaId)
-//   });
-// }
-
-// GRUPO DE REPETIÇÃO
 for (let card of cards) {
-  card.addEventListener("click", function () {
-      let recipeIndex = card.getAttribute("id")
+  card.addEventListener('click', () => {
+    const recipeIndex  = card.getAttribute('id');
+    window.location.href = `/recipe/${recipeIndex }`
+    // console.log(recipeIndex )
+  });
+}
 
-      console.log(recipeIndex);
-      window.location.href = `/recipe/${recipeIndex}`
+// Hide/Show Button
+const buttons = document.querySelectorAll('.btn-collapse')
+const details = document.querySelectorAll('.details')
+
+function hideDetails(index) {
+  buttons[index].addEventListener('click', () => {
+
+    if (details[index].classList.contains('hide-details')) {
+      details[index].classList.remove('hide-details')
+      buttons[index].innerHTML = 'ESCONDER'
+    } else {
+      details[index].classList.add('hide-details')
+      buttons[index].innerHTML = 'MOSTRAR'
+    }
   })
 }
 
-const buttons = document.querySelectorAll(".btn-collapse")
-const details = document.querySelectorAll(".details")
-
-for (let i = 0; i < hideShow.length; i++) {
-    hideShow[i].addEventListener('click', function () {
-        if (hideShow[i].innerHTML == 'ESCONDER') {
-               detailsContent[i].setAttribute("hidden", true)
-            hideShow[i].innerHTML = 'MOSTRAR'
-        } else {
-            hideShow[i].innerHTML = 'ESCONDER'
-            detailsContent[i].removeAttribute('hidden', true)
-        }
-    })
+for (let i = 0; i < 3; i++) {
+  hideDetails(i)
 }
 
-// // Hide/Show Button
-// const buttons = document.querySelectorAll('.btn-collapse')
-// const details = document.querySelectorAll('.details')
-
-// function hideDetails(index) {
-//   buttons[index].addEventListener('click', () => {
-
-//     if (details[index].classList.contains('hide-details')) {
-//       details[index].classList.remove('hide-details')
-//       buttons[index].innerHTML = 'ESCONDER'
-//     } else {
-//       details[index].classList.add('hide-details')
-//       buttons[index].innerHTML = 'MOSTRAR'
-//     }
-//   })
-// }
-
-// for (let i = 0; i < 3; i++) {
-//   hideDetails(i)
-// }
 
 //adicionar items
   function addIngredient () {
