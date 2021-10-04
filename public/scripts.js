@@ -14,7 +14,7 @@ const cards = document.querySelectorAll('.card');
 for (let card of cards) {
   card.addEventListener('click', () => {
     const recipeIndex  = card.getAttribute('id');
-    window.location.href = `/recipe/${recipeIndex }`
+    window.location.href = `/recipes/${recipeIndex }`
     // console.log(recipeIndex )
   });
 }
